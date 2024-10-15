@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Gokul P</h1>
-<h3 align="center">Doing Bachelors in Computer Science and Enginnering with speciliszation in Artificial Inelligance </h3>
+<h3 align="center">Doing Bachelor’s in Computer Science and Engineering with Specialization in Artificial Intelligence </h3>
 
 - 🔭 I’m currently working on [Voxella](https://github.com/pgokul695/Voxella)
 
