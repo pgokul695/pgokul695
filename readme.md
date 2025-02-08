@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Gokul P</h1>
 <h3 align="center">Doing Bachelor’s in Computer Science and Engineering with Specialization in Artificial Intelligence </h3>
 
-- 🔭 I’m currently working on [Voxella](https://github.com/pgokul695/Voxella)
+- 🔭 I’m currently working on [....](https://github.com/pgokul695)
 
 - 📫 How to reach me **Pgokul695@gmail.com**
 
