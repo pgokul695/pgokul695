@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm GOKUL P</h1>
 <h3 align="center">Doing Bachelor’s in Computer Science and Engineering with Specialization in Artificial Intelligence</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=pgokul695&label=Profile%20views&color=210eb4&style=flat-square" alt="pgokul695" /> </p>
+
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=pgokul695" alt="pgokul695" /></a> </p>
 
@@ -29,3 +29,4 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=pgokul695&show_icons=true&theme=dark&locale=en" alt="pgokul695" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=pgokul695&theme=dark" alt="pgokul695" /></p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=pgokul695&label=Profile%20views&color=210eb4&style=flat-square" alt="pgokul695" /> </p>
