@@ -11,7 +11,7 @@
 
 - 📝 WEBPAGE [https://pgokul695.github.io/](https://pgokul695.github.io/)
 
-- 📫 How to reach me **pgokul695@gmail.com**
+- 📫 How to reach me **gokulp.codes@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
