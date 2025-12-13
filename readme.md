@@ -13,6 +13,7 @@
   </a>
 </p>
 
+
 <p align="center">
   I am a <strong>Computer Science & Engineering</strong> student specializing in <strong>Artificial Intelligence</strong> (Class of 2027). I bridge the gap between software and hardware, with a passion that ranges from building neural networks to configuring homelabs and Linux servers.
 </p>
