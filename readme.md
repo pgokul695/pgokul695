@@ -60,10 +60,19 @@
 ---
 
 <p align="center">
-  <a href="https://x.com/p_pgokul" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="pgokul695" height="30" width="40" /></a>
-  <a href="https://linkedin.com/in/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="pgokul695" height="30" width="40" /></a>
-  <a href="https://instagram.com/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="pgokul695" height="30" width="40" /></a>
-  <a href="https://www.youtube.com/c/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="pgokul695" height="30" width="40" /></a>
+  <a href="mailto:gokulp.codes@gmail.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/gmail.svg" alt="Email" height="30" width="40" /></a>
+  
+  <a href="https://linkedin.com/in/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" /></a>
+  
+  <a href="https://x.com/p_pgokul" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" /></a>
+  
+  <a href="https://instagram.com/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="40" /></a>
+  
+  <a href="https://www.youtube.com/c/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="YouTube" height="30" width="40" /></a>
+  
+  <a href="https://www.reddit.com/user/Specialist_Froyo_362/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/reddit.svg" alt="Reddit" height="30" width="40" /></a>
+
+  <a href="https://extensions.gnome.org/accounts/profile/Gokul.codes" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/6/60/GNOME_Foot_Icon_2024.svg" alt="GNOME" height="30" width="40" /></a>
 </p>
 
 <p align="center"> 
