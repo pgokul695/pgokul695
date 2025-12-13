@@ -16,6 +16,7 @@
             display: flex;
             flex-direction: column;
             text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+            box-sizing: border-box;
         }
         
         #terminal {
@@ -24,14 +25,17 @@
             white-space: pre-wrap;
             z-index: 10;
             position: relative;
+            padding-bottom: 20px;
         }
 
         #terminal::-webkit-scrollbar { display: none; }
+        #terminal { -ms-overflow-style: none; scrollbar-width: none; }
 
         .input-line {
             display: flex;
             margin-top: 10px;
             z-index: 10;
+            flex-shrink: 0;
         }
 
         #prompt {
@@ -92,11 +96,12 @@
     <canvas id="matrix"></canvas>
 
     <div id="terminal">
-        <div>Welcome to Gokul's Legacy System v2.1.</div>
-        <div>identity: Technical Architect | AI & Cybersecurity Expert</div>
+        <div>Welcome to Gokul's Legacy System v2.3.</div>
+        <div>identity: Co-Founder & Tech Lead @ Ayunex | AI Specialist</div>
         <div>Warning: You are viewing an archived interface.</div>
         <div>Type <span style="color:white">'help'</span> to see available commands.</div>
-        <div>Type <span style="color:white">'log'</span> to see the full timeline (2019-Present).</div>
+        <div>Type <span style="color:white">'log'</span> to see the full timeline.</div>
+        <div>Type <span style="color:white">'gui'</span> to load the original website.</div>
         <br>
     </div>
 
@@ -111,73 +116,104 @@
         // --- 1. CONFIGURATION ---
         const NEW_PORTFOLIO_URL = "https://pgokul695.github.io/";
         
-        // This is the "Retro" version of your site for the GUI command
+        // YOUR EXACT OLD WEBSITE HTML
         const OLD_WEBSITE_HTML = `
             <style>
-                .old-body { font-family: 'Times New Roman', serif; margin: 0; padding: 0; background-color: #eaeaea; color: #000; }
-                .old-header { background-color: #333; color: white; padding: 20px; text-align: center; border-bottom: 5px solid #4CAF50; }
-                .old-container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; border: 1px solid #ccc; box-shadow: 5px 5px 0px #888; }
-                .old-h2 { border-bottom: 2px solid #4CAF50; padding-bottom: 5px; }
-                .old-ul { list-style-type: square; padding-left: 20px; }
-                .old-footer { text-align: center; font-size: 12px; margin-top: 20px; padding: 10px; border-top: 1px solid #ccc; }
-                #back-btn { display: block; margin: 20px auto; padding: 10px 20px; background: #000; color: #0f0; border: 2px solid #0f0; cursor: pointer; font-family: monospace; font-weight: bold; }
-                #back-btn:hover { background: #0f0; color: #000; }
+                .old-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; overflow-y: auto; color: #333; text-align: left; }
+                .old-header { background-color: #4CAF50; color: white; padding: 1em; text-align: center; }
+                .old-section { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+                .old-h2 { color: #333; }
+                .old-ul { list-style-type: none; padding: 0; }
+                .old-li { background: #e0e0e0; margin: 5px 0; padding: 10px; border-radius: 4px; }
+                .old-footer { background-color: #333; color: white; text-align: center; padding: 10px; position: relative; width: 100%; bottom: 0; left: 0; margin-top: 20px; }
+                .old-a { text-decoration: none; color: #4CAF50; font-weight: bold; }
+                .old-a:hover { text-decoration: underline; }
+                
+                /* Injected Return Button */
+                #back-btn { 
+                    display: block; 
+                    margin: 20px auto; 
+                    padding: 15px 30px; 
+                    background: #333; 
+                    color: #4CAF50; 
+                    border: 2px solid #4CAF50; 
+                    cursor: pointer; 
+                    font-family: Arial, sans-serif; 
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                #back-btn:hover { background: #000; color: #fff; }
             </style>
             <div class="old-body">
                 <header class="old-header">
                     <h1>Gokul P</h1>
-                    <p>Computer Science Student | Web Developer</p>
-                    <small><i>(Archived Snapshot: Circa 2020)</i></small>
+                    <p>Computer Science & AI Enthusiast</p>
                 </header>
-                <div class="old-container">
-                    <h2 class="old-h2">About</h2>
-                    <p>Hello! I am a student interested in computers. I am learning HTML and CSS. I use a free hosting provider to run this website.</p>
-                    
+                <section class="old-section">
+                    <h2 class="old-h2">About Me</h2>
+                    <p>I'm a passionate Computer Science student specializing in Artificial Intelligence. I love working on innovative projects and exploring new technologies.</p>
+                </section>
+                <section class="old-section">
+                    <h2 class="old-h2">Skills</h2>
+                    <ul class="old-ul">
+                        <li class="old-li">C & C++</li>
+                        <li class="old-li">Java</li>
+                        <li class="old-li">Python</li>
+                        <li class="old-li">JavaScript</li>
+                        <li class="old-li">Open CV</li>
+                        <li class="old-li">Linux</li>
+                    </ul>
+                </section>
+                <section class="old-section">
                     <h2 class="old-h2">Projects</h2>
                     <ul class="old-ul">
-                        <li>My First WordPress Blog</li>
-                        <li>Basic Calculator App</li>
-                        <li>School Project Website</li>
+                        <li class="old-li"><a class="old-a" href="https://github.com/pgokul695/Voxella" target="_blank">Voxella</a></li>
+                        <li class="old-li"><a class="old-a" href="https://github.com/pgokul695/Hack-n-tech" target="_blank">Hack-n-tech</a></li>
+                        <li class="old-li"><a class="old-a" href="https://github.com/pgokul695/ASIET" target="_blank">ASIET</a></li>
                     </ul>
-
+                </section>
+                <section class="old-section">
                     <h2 class="old-h2">Contact</h2>
-                    <p>Email: pgokul695@gmail.com</p>
-                </div>
-                <div class="old-footer">
-                    Host: FreeHostingProvider | Powered by HTML5
-                </div>
-                <button id="back-btn" onclick="closeGui()">Return_to_Terminal</button>
+                    <p>Email: <a class="old-a" href="mailto:pgokul695@gmail.com">pgokul695@gmail.com</a></p>
+                    <p>LinkedIn: <a class="old-a" href="https://in.linkedin.com/in/pgokul695" target="_blank">linkedin.com/in/pgokul695</a></p>
+                    <p>Instagram: <a class="old-a" href="https://www.instagram.com/pgokul695/" target="_blank">@pgokul695</a></p>
+                    <p>YouTube: <a class="old-a" href="http://youtube.com/@pgokul695" target="_blank">youtube.com/@pgokul695</a></p>
+                </section>
+                <footer class="old-footer">
+                    <p>&copy; 2025 Gokul P</p>
+                </footer>
+                <br>
+                <button id="back-btn" onclick="closeGui()">Return to Terminal</button>
+                <br>
             </div>
         `;
 
-        // Updated Data based on your MAIN WEBSITE content
         const fileSystem = {
-            'about': "Gokul P - Technical Architect\n\nI specialize in bridging the gap between AI model development and real-world system integration.\n\n- Education: B.Tech CSE (AI) @ Adi Shankara Institute (2023-2027)\n- Focus: Secure Infrastructure, IoT, Competitive Cybersecurity\n- Status: Top 5% NPTEL Performer, AICTE Fellow (Shortlisted)",
+            'about': "Gokul P - Technical Architect\n\nI specialize in bridging the gap between AI model development and real-world system integration.\n\n- Education: B.Tech CSE (AI) @ Adi Shankara Institute (2023-2027)\n- Current Role: Co-Founder & Technical Lead @ Ayunex\n- Focus: Secure Infrastructure, IoT, Competitive Cybersecurity",
             
-            'skills': "CORE COMPETENCIES:\n\n[AI/ML]\n- Supervised/Unsupervised Learning, RL, Computer Vision\n- Tools: IBM Watson, OpenCV, TensorFlow\n\n[LANGUAGES]\n- Python (Scripting/ML), Java (OOP/Swing), C/C++, JavaScript, SQL\n\n[DEVOPS & CLOUD]\n- Linux, Docker, Ansible, Prometheus, Grafana\n- Homelab Administration (Virtualization/Monitoring)\n\n[CYBERSECURITY]\n- Ethical Hacking, CTF Competitions, Pen Testing",
+            'skills': "CORE COMPETENCIES:\n\n[AI/ML]\n- Supervised/Unsupervised Learning, RL, Computer Vision\n- Tools: IBM Watson, OpenCV, TensorFlow\n\n[LANGUAGES]\n- Python (Scripting/ML), Java (OOP/Swing), C/C++, JavaScript, SQL\n\n[DEVOPS & CLOUD]\n- Linux, Docker, Ansible, Prometheus, Grafana\n- Homelab Administration (Virtualization/Monitoring)",
             
-            'projects': "PROJECT PORTFOLIO:\n\n1. AYUNEX (Startup)\n   > Hybrid elderly monitoring system (Sensors + AI).\n\n2. ARCANUM AI (HackRX 6.0)\n   > High-perf Q&A system. Hybrid AI strategy, 2-level caching, Doc parsing.\n\n3. CINESHIELD (Anti-Piracy)\n   > 2-Tier detection (Perceptual Hash + AI). Automated Telegram bot.\n\n4. BASTION (GNOME)\n   > Privacy extension. DNS leaks protection & Captive Portal handling.\n\n5. PRAYAG '25 CTF\n   > Architected national-level CTF competition infrastructure.",
+            'projects': "PROJECT PORTFOLIO:\n\n1. AYUNEX (Jun 2025 - Present)\n   > Co-Founder & Technical Lead. Building hardware/AI prototypes for elderly care.\n\n2. ARCANUM AI (HackRX 6.0)\n   > High-perf Q&A system. Hybrid AI strategy, 2-level caching.\n\n3. CINESHIELD (Anti-Piracy)\n   > 2-Tier detection (Perceptual Hash + AI).\n\n4. BASTION (GNOME)\n   > Privacy extension. DNS leaks protection & Captive Portal handling.",
             
             'academics': "ACADEMIC PERFORMANCE:\n\n- Degree: B.Tech CSE (Artificial Intelligence)\n- Current SGPA (S4): 9.59\n- Overall CGPA: 8.63\n- Expected Graduation: May 2027",
             
-            'certs': "CERTIFICATIONS & LICENSES:\n\n- Stanford University: Machine Learning Specialization (Dec 2025)\n- NPTEL: Fundamentals of AI (Elite+Silver, Top 5%)\n- NPTEL: Joy of Computing using Python (Elite+Silver, Top 5%)\n- IBM: AI Fundamentals, Data Analytics, ML Tools\n- DeepLearning.AI: Advanced Learning Algorithms\n- IEEE Xtreme 17.0: Global Rank #376",
+            'certs': "CERTIFICATIONS & LICENSES:\n\n- Stanford University: Machine Learning Specialization (Dec 2025)\n- NPTEL: Fundamentals of AI (Elite+Silver, Top 5%)\n- NPTEL: Joy of Computing using Python (Elite+Silver, Top 5%)\n- IEEE Xtreme 17.0: Global Rank #376",
             
-            'contact': "CONNECT:\n\n- Email (Pro): gokulp.codes@gmail.com\n- Email (Personal): pgokul695@gmail.com\n- LinkedIn: linkedin.com/in/pgokul695\n- GitHub: github.com/pgokul695\n- GNOME: extensions.gnome.org/accounts/profile/Gokul.codes",
+            'contact': "CONNECT:\n\n- Email (Pro): gokulp.codes@gmail.com\n- Email (Personal): pgokul695@gmail.com\n- LinkedIn: linkedin.com/in/pgokul695\n- GitHub: github.com/pgokul695",
             
-            'story': "THE EVOLUTION:\n\n[2019]: The journey began. First web presence established using WordPress.\n[2020]: Moved to a Free Hosting Provider to learn raw HTML/CSS & backend basics.\n[2023]: Migrated to GitHub Pages for professional version control.\n[2025]: Now a Technical Architect & Founder, hosting complex AI systems.\n\nThis terminal is a tribute to those early days of command-line discovery.",
+            'story': "THE EVOLUTION:\n\n[2019]: The journey began. First web presence established using WordPress.\n[2020]: Moved to a Free Hosting Provider to learn raw HTML/CSS & backend basics.\n[2023]: Migrated to GitHub Pages for professional version control.\n[2025]: Now a Technical Architect & Co-Founder, hosting complex AI systems.",
             
             'log': "Fetching system logs..."
         };
 
-        // Updated Log Timeline based on 2019 start date
         const logs = [
             { date: "2019-11-01", level: "INIT", msg: "Initial web presence established (WordPress)." },
             { date: "2020-06-15", level: "MIGRATE", msg: "Migrated to Free Hosting Provider. Learning HTML structure." },
-            { date: "2021-03-20", level: "DEV", msg: "Experimenting with CSS and basic JavaScript." },
             { date: "2023-08-15", level: "GIT_INIT", msg: "Repository initialized. Migrated to GitHub Pages." },
             { date: "2024-02-10", level: "BUILD", msg: "Developed Voxella & Hack-n-tech. AI interest peaks." },
+            { date: "2025-06-01", level: "STARTUP", msg: "Co-Founded Ayunex. Appointed Technical Lead." },
+            { date: "2025-06-15", level: "DEV", msg: "Started building Hardware & AI prototypes for Ayunex." },
             { date: "2025-10-31", level: "MILESTONE", msg: "Shortlisted for AICTE APF & Yukthi Challenge." },
-            { date: "2025-11-06", level: "STARTUP", msg: "Founded Ayunex (Early-stage AI Startup)." },
             { date: "2025-12-09", level: "RELEASE", msg: "Published 'Bastion' GNOME Extension." },
             { date: "2025-12-13", level: "CURRENT", msg: "Stanford ML Certified | Technical Architect." }
         ];
@@ -200,13 +236,18 @@
         const terminal = document.getElementById('terminal');
         const guiContainer = document.getElementById('gui-container');
 
+        // AUTO-SCROLL FUNCTION
+        function scrollToBottom() {
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
         input.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
                 const cmd = input.value.trim().toLowerCase();
                 printLine(`gokul@legacy:~$ ${cmd}`, '#58a6ff');
                 processCommand(cmd);
                 input.value = '';
-                window.scrollTo(0, document.body.scrollHeight);
+                scrollToBottom();
             }
         });
 
@@ -220,6 +261,7 @@
                 div.innerText = text; 
             }
             terminal.appendChild(div);
+            scrollToBottom(); 
         }
 
         function processCommand(cmd) {
@@ -237,7 +279,7 @@
             }
             
             if (cmd === 'gui' || cmd === 'startx' || cmd === './old_site.exe') {
-                printLine("Initializing graphics adapter (Circa 2020)...", "yellow");
+                printLine("Initializing graphics adapter...", "yellow");
                 setTimeout(() => {
                     guiContainer.innerHTML = OLD_WEBSITE_HTML;
                     guiContainer.style.display = 'block';
@@ -276,13 +318,13 @@
                     let color = '#0f0'; // Default green
                     if (log.level === 'INIT') color = '#888'; 
                     if (log.level === 'MIGRATE') color = '#aaa'; 
-                    if (log.level === 'MILESTONE') color = '#ff00ff'; // Magenta
+                    if (log.level === 'MILESTONE') color = '#ff00ff'; 
                     if (log.level === 'STARTUP') color = 'cyan'; 
                     if (log.level === 'CURRENT') color = 'yellow';
                     
                     const logLine = `[${log.date}] [${log.level}] ${log.msg}`;
                     printLine(logLine, color);
-                    window.scrollTo(0, document.body.scrollHeight);
+                    scrollToBottom(); 
                 }, delay);
                 delay += 100;
             });
