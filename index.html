@@ -3,57 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gokul P - Portfolio</title>
+    <title>gokul@legacy:~$</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; overflow-y: auto; }
-        header { background-color: #4CAF50; color: white; padding: 1em; text-align: center; }
-        section { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        h2 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { background: #e0e0e0; margin: 5px 0; padding: 10px; border-radius: 4px; }
-        footer { background-color: #333; color: white; text-align: center; padding: 10px; position: relative; width: 100%; bottom: 0; left: 0; }
-        a { text-decoration: none; color: #4CAF50; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        body {
+            background-color: #0d1117;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+        
+        #terminal {
+            flex-grow: 1;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            z-index: 10;
+            position: relative;
+        }
+
+        /* Hide scrollbar but allow scrolling */
+        #terminal::-webkit-scrollbar { display: none; }
+
+        .input-line {
+            display: flex;
+            margin-top: 10px;
+            z-index: 10;
+        }
+
+        #prompt {
+            color: #58a6ff;
+            margin-right: 10px;
+        }
+
+        #cmd-input {
+            background: transparent;
+            border: none;
+            color: #0f0;
+            font-family: inherit;
+            font-size: inherit;
+            flex-grow: 1;
+            outline: none;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+
+        a { color: #fff; text-decoration: underline; }
+        
+        /* Scanline effect */
+        body::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* Matrix Canvas */
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.05; 
+        }
+
+        /* GUI Container */
+        #gui-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 100;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Gokul P</h1>
-        <p>Computer Science & AI Enthusiast</p>
-    </header>
-    <section>
-        <h2>About Me</h2>
-        <p>I'm a passionate Computer Science student specializing in Artificial Intelligence. I love working on innovative projects and exploring new technologies.</p>
-    </section>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>C & C++</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>Open CV</li>
-            <li>Linux</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/pgokul695/Voxella" target="_blank">Voxella</a></li>
-            <li><a href="https://github.com/pgokul695/Hack-n-tech" target="_blank">Hack-n-tech</a></li>
-            <li><a href="https://github.com/pgokul695/ASIET" target="_blank">ASIET</a></li>
-        </ul>
-    </section>
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:pgokul695@gmail.com">pgokul695@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://in.linkedin.com/in/pgokul695" target="_blank">linkedin.com/in/pgokul695</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/pgokul695/" target="_blank">@pgokul695</a></p>
-        <p>YouTube: <a href="http://youtube.com/@pgokul695" target="_blank">youtube.com/@pgokul695</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Gokul P</p>
-    </footer>
+
+    <canvas id="matrix"></canvas>
+
+    <div id="terminal">
+        <div>Welcome to Gokul's Legacy System v1.0.</div>
+        <div>Warning: You are viewing an archived portfolio.</div>
+        <div>Type <span style="color:white">'help'</span> to see available commands.</div>
+        <div>Type <span style="color:white">'log'</span> to see development history.</div>
+        <br>
+    </div>
+
+    <div class="input-line">
+        <span id="prompt">gokul@legacy:~$</span>
+        <input type="text" id="cmd-input" autofocus autocomplete="off">
+    </div>
+
+    <div id="gui-container"></div>
+
+    <script>
+        // --- 1. CONFIGURATION ---
+        const NEW_PORTFOLIO_URL = "https://pgokul695.github.io/";
+        
+        const OLD_WEBSITE_HTML = `
+            <style>
+                .old-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+                .old-header { background-color: #4CAF50; color: white; padding: 1em; text-align: center; }
+                .old-section { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+                .old-h2 { color: #333; }
+                .old-ul { list-style-type: none; padding: 0; }
+                .old-li { background: #e0e0e0; margin: 5px 0; padding: 10px; border-radius: 4px; }
+                .old-footer { background-color: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+                .old-a { text-decoration: none; color: #4CAF50; font-weight: bold; }
+                .old-a:hover { text-decoration: underline; }
+                #back-btn { display: block; margin: 20px auto; padding: 10px 20px; background: #333; color: #0f0; border: none; cursor: pointer; font-family: monospace; font-size: 16px; }
+                #back-btn:hover { background: #000; }
+            </style>
+            <div class="old-body">
+                <header class="old-header">
+                    <h1>Gokul P</h1>
+                    <p>Computer Science & AI Enthusiast</p>
+                </header>
+                <section class="old-section">
+                    <h2 class="old-h2">About Me</h2>
+                    <p>I'm a passionate Computer Science student specializing in Artificial Intelligence. I love working on innovative projects and exploring new technologies.</p>
+                </section>
+                <section class="old-section">
+                    <h2 class="old-h2">Skills</h2>
+                    <ul class="old-ul">
+                        <li class="old-li">C & C++</li>
+                        <li class="old-li">Java</li>
+                        <li class="old-li">Python</li>
+                        <li class="old-li">JavaScript</li>
+                        <li class="old-li">Open CV</li>
+                        <li class="old-li">Linux</li>
+                    </ul>
+                </section>
+                <section class="old-section">
+                    <h2 class="old-h2">Projects</h2>
+                    <ul class="old-ul">
+                        <li class="old-li"><a class="old-a" href="https://github.com/pgokul695/Voxella" target="_blank">Voxella</a></li>
+                        <li class="old-li"><a class="old-a" href="https://github.com/pgokul695/Hack-n-tech" target="_blank">Hack-n-tech</a></li>
+                        <li class="old-li"><a class="old-a" href="https://github.com/pgokul695/ASIET" target="_blank">ASIET</a></li>
+                    </ul>
+                </section>
+                <section class="old-section">
+                    <h2 class="old-h2">Contact</h2>
+                    <p>Email: <a class="old-a" href="mailto:pgokul695@gmail.com">pgokul695@gmail.com</a></p>
+                    <p>LinkedIn: <a class="old-a" href="https://in.linkedin.com/in/pgokul695" target="_blank">linkedin.com/in/pgokul695</a></p>
+                    <p>Instagram: <a class="old-a" href="https://www.instagram.com/pgokul695/" target="_blank">@pgokul695</a></p>
+                    <p>YouTube: <a class="old-a" href="http://youtube.com/@pgokul695" target="_blank">youtube.com/@pgokul695</a></p>
+                </section>
+                <footer class="old-footer">
+                    <p>&copy; 2025 Gokul P</p>
+                </footer>
+                <button id="back-btn" onclick="closeGui()">Return_to_Terminal</button>
+            </div>
+        `;
+
+        const fileSystem = {
+            'about': "I'm a passionate Computer Science student specializing in Artificial Intelligence. \nFounder @ Ayunex. GNOME Contributor.",
+            'skills': "LANGUAGES: C, C++, Java, Python, JavaScript\nTOOLS: OpenCV, Linux, Docker, Git\nSPECIALTY: AI/ML, Backend",
+            'projects': "1. Voxella\n2. Hack-n-tech\n3. Bastion (GNOME Extension)\n4. Ayunex (Startup)",
+            'contact': "Email: gokulp.codes@gmail.com\nGitHub: github.com/pgokul695\nLinkedIn: linkedin.com/in/pgokul695",
+            'story': "THE ORIGIN STORY:\n\nThis specific URL was the home of my very first portfolio.\nIt was a simple, static site built with pure HTML and CSS when I was first learning web development.\n\nAs my skills in AI, backend, and Linux grew, I moved to a modern portfolio.\nInstead of deleting this old URL, I converted it into this Terminal to serve as a digital archive.\n\nType 'gui' to view the original snapshot.",
+            'log': "Fetching system logs..."
+        };
+
+        const logs = [
+            { date: "2023-08-15", level: "INIT", msg: "Repository initialized. Learning HTML/CSS." },
+            { date: "2024-02-10", level: "UPDATE", msg: "Built Voxella & Hack-n-tech. Exploring AI." },
+            { date: "2024-09-01", level: "INFO", msg: "Shifted focus to Deep Learning & Computer Vision." },
+            { date: "2025-10-31", level: "MILESTONE", msg: "Shortlisted for AICTE APF & Yukthi Challenge." },
+            { date: "2025-11-06", level: "COMMIT", msg: "Founded Ayunex (Early-stage Startup)." },
+            { date: "2025-12-09", level: "RELEASE", msg: "Published 'Bastion' GNOME Extension." },
+            { date: "2025-12-13", level: "CURRENT", msg: "IIT Ropar Intern | C++ & AI Specialist." }
+        ];
+
+        const commands = {
+            'help': "Available commands: [about] [skills] [projects] [contact] [story] [log] [gui] [clear] [exit]",
+            'ls': "about.txt  skills.log  projects.dir  contact.info  story.md  changelog.txt  old_site.exe",
+            'gui': "Launching legacy graphical interface...",
+            'startx': "Launching legacy graphical interface...",
+            'whoami': "visitor@internet",
+            'sudo': "User not in the sudoers file. This incident will be reported.",
+            'rm -rf /': "Nice try. I'm not deleting myself.",
+            'exit': "Redirecting to main portfolio...",
+            'reboot': "Redirecting to main portfolio...",
+            'matrix': "Follow the white rabbit..."
+        };
+
+        // --- 2. TERMINAL LOGIC ---
+        const input = document.getElementById('cmd-input');
+        const terminal = document.getElementById('terminal');
+        const guiContainer = document.getElementById('gui-container');
+
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const cmd = input.value.trim().toLowerCase();
+                printLine(`gokul@legacy:~$ ${cmd}`, '#58a6ff');
+                processCommand(cmd);
+                input.value = '';
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+        });
+
+        function printLine(text, color = '#0f0') {
+            const div = document.createElement('div');
+            div.style.color = color;
+            if (text.includes('http')) {
+                text = text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
+                div.innerHTML = text;
+            } else {
+                div.innerText = text; 
+            }
+            terminal.appendChild(div);
+        }
+
+        function processCommand(cmd) {
+            if (cmd === '') return;
+
+            if (cmd === 'clear') {
+                terminal.innerHTML = '';
+                return;
+            }
+
+            if (cmd === 'exit' || cmd === 'reboot') {
+                printLine("Redirecting...", "yellow");
+                setTimeout(() => window.location.href = NEW_PORTFOLIO_URL, 1000);
+                return;
+            }
+            
+            if (cmd === 'gui' || cmd === 'startx' || cmd === './old_site.exe') {
+                printLine("Initializing graphics adapter...", "yellow");
+                setTimeout(() => {
+                    guiContainer.innerHTML = OLD_WEBSITE_HTML;
+                    guiContainer.style.display = 'block';
+                    document.body.style.overflow = 'auto'; 
+                }, 800);
+                return;
+            }
+
+            if (cmd === 'matrix') {
+                startMatrixRain();
+                printLine("Matrix mode activated. (Refresh to stop)", "green");
+                return;
+            }
+
+            if (cmd === 'log' || cmd === 'cat changelog.txt') {
+                printLog();
+                return;
+            }
+
+            if (commands[cmd]) {
+                printLine(commands[cmd]);
+            } 
+            else if (fileSystem[cmd] || (cmd.startsWith('cat ') && fileSystem[cmd.split(' ')[1]])) {
+                const key = cmd.startsWith('cat ') ? cmd.split(' ')[1] : cmd;
+                printLine(fileSystem[key]);
+            }
+            else {
+                printLine(`Command not found: ${cmd}. Type 'help' for options.`, 'red');
+            }
+        }
+
+        function printLog() {
+            let delay = 0;
+            logs.forEach(log => {
+                setTimeout(() => {
+                    let color = '#0f0'; // Default green
+                    if (log.level === 'INIT') color = '#888'; // Grey
+                    if (log.level === 'MILESTONE') color = '#ff00ff'; // Magenta
+                    if (log.level === 'COMMIT') color = 'cyan'; 
+                    if (log.level === 'CURRENT') color = 'yellow';
+                    
+                    const logLine = `[${log.date}] [${log.level}] ${log.msg}`;
+                    printLine(logLine, color);
+                    window.scrollTo(0, document.body.scrollHeight);
+                }, delay);
+                delay += 100; // Cascade effect
+            });
+        }
+        
+        window.closeGui = function() {
+            guiContainer.style.display = 'none';
+            guiContainer.innerHTML = ''; 
+            document.body.style.overflow = 'hidden'; 
+            input.focus();
+        };
+
+        document.body.addEventListener('click', (e) => {
+            if(guiContainer.style.display !== 'block') input.focus();
+        });
+
+        // --- 3. MATRIX EASTER EGG ---
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        const nums = '0123456789';
+        const alphabet = katakana + latin + nums;
+
+        const fontSize = 16;
+        const columns = canvas.width/fontSize;
+        const rainDrops = [];
+
+        for( let x = 0; x < columns; x++ ) {
+            rainDrops[x] = 1;
+        }
+
+        let matrixInterval;
+
+        function draw() {
+            ctx.fillStyle = 'rgba(13, 17, 23, 0.05)'; 
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px monospace';
+
+            for(let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i*fontSize, rainDrops[i]*fontSize);
+
+                if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+
+        function startMatrixRain() {
+            canvas.style.opacity = "0.4";
+            clearInterval(matrixInterval);
+            matrixInterval = setInterval(draw, 30);
+        }
+
+        setInterval(draw, 80); 
+
+    </script>
 </body>
 </html>
-
