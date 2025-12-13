@@ -59,20 +59,35 @@
 
 ---
 
-<p align="center">
-  <a href="mailto:gokulp.codes@gmail.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/gmail.svg" alt="Email" height="30" width="40" /></a>
-  
-  <a href="https://linkedin.com/in/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" /></a>
-  
-  <a href="https://x.com/p_pgokul" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" /></a>
-  
-  <a href="https://instagram.com/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="40" /></a>
-  
-  <a href="https://www.youtube.com/c/pgokul695" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="YouTube" height="30" width="40" /></a>
-  
-  <a href="https://www.reddit.com/user/Specialist_Froyo_362/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/reddit.svg" alt="Reddit" height="30" width="40" /></a>
-
-  <a href="https://extensions.gnome.org/accounts/profile/Gokul.codes" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/6/60/GNOME_Foot_Icon_2024.svg" alt="GNOME" height="30" width="40" /></a>
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+  <a href="mailto:gokulp.codes@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Professional Email" />
+  </a>
+  <a href="mailto:pgokul695@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Personal_Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Personal Email" />
+  </a>
+  <a href="https://linkedin.com/in/pgokul695" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/pgokul695" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="https://x.com/p_pgokul" target="_blank">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X / Twitter" />
+  </a>
+  <a href="https://instagram.com/pgokul695" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  </a>
+  <a href="https://www.youtube.com/c/pgokul695" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+  </a>
+  <a href="https://www.reddit.com/user/Specialist_Froyo_362/" target="_blank">
+    <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit" />
+  </a>
+  <a href="https://extensions.gnome.org/accounts/profile/Gokul.codes" target="_blank">
+    <img src="https://img.shields.io/badge/GNOME_Extensions-4a86cf?style=for-the-badge&logo=gnome&logoColor=white" alt="GNOME Extensions" />
+  </a>
 </p>
 
 <p align="center"> 
