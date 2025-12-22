@@ -1,5 +1,5 @@
 <h1 align="center">Hi there 👋, I'm Gokul P</h1>
-<h3 align="center">Co Founder @ Ayunex | AI Specialist | Open Source Enthusiast</h3>
+<h3 align="center">Winter Intern @IIT Ropar| Co Founder @ Ayunex | AI Specialist | Open Source Enthusiast</h3>
 
 <p align="center">
   <a href="https://pgokul695.github.io/">
