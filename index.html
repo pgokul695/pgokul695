@@ -97,7 +97,7 @@
 
     <div id="terminal">
         <div>Welcome to Gokul's Legacy System v2.3.</div>
-        <div>identity: Co-Founder & Tech Lead @ Ayunex | AI Specialist</div>
+        <div>identity: Winter Intern @ IIT Ropar | Co-Founder & Tech Lead @ Ayunex | AI Specialist</div>
         <div>Warning: You are viewing an archived interface.</div>
         <div>Type <span style="color:white">'help'</span> to see available commands.</div>
         <div>Type <span style="color:white">'log'</span> to see the full timeline.</div>
@@ -189,9 +189,9 @@
         `;
 
         const fileSystem = {
-            'about': "Gokul P - Technical Architect\n\nI specialize in bridging the gap between AI model development and real-world system integration.\n\n- Education: B.Tech CSE (AI) @ Adi Shankara Institute (2023-2027)\n- Current Role: Co-Founder & Technical Lead @ Ayunex\n- Focus: Secure Infrastructure, IoT, Competitive Cybersecurity",
+            'about': "Gokul P - Technical Architect | Winter Intern @ IIT Ropar\n\nCurrently a Winter Intern at IIT Ropar, focusing on full-stack development using the MERN stack to build scalable, high-performance web architectures.\n\nI specialize in bridging the gap between AI model development and real-world system integration.\n\n- Education: B.Tech CSE (AI) @ Adi Shankara Institute (2023-2027)\n- Current Role: Co-Founder & Technical Lead @ Ayunex\n- Internship: NPTEL Winter Internship 2025 @ IIT Ropar (Dec 2025 - Jan 2026)\n- Focus: MERN Stack Development, Secure Infrastructure, IoT, Cybersecurity",
             
-            'skills': "CORE COMPETENCIES:\n\n[AI/ML]\n- Supervised/Unsupervised Learning, RL, Computer Vision\n- Tools: IBM Watson, OpenCV, TensorFlow\n\n[LANGUAGES]\n- Python (Scripting/ML), Java (OOP/Swing), C/C++, JavaScript, SQL\n\n[DEVOPS & CLOUD]\n- Linux, Docker, Ansible, Prometheus, Grafana\n- Homelab Administration (Virtualization/Monitoring)",
+            'skills': "CORE COMPETENCIES:\n\n[AI/ML]\n- Supervised/Unsupervised Learning, RL, Computer Vision\n- Tools: IBM Watson, OpenCV, TensorFlow\n\n[FULL-STACK DEVELOPMENT]\n- MERN Stack (MongoDB, Express.js, React.js, Node.js)\n- Building scalable web architectures\n- RESTful API development\n\n[LANGUAGES]\n- Python (Scripting/ML), Java (OOP/Swing), C/C++, JavaScript, SQL\n\n[DEVOPS & CLOUD]\n- Linux, Docker, Ansible, Prometheus, Grafana\n- Homelab Administration (Virtualization/Monitoring)",
             
             'projects': "PROJECT PORTFOLIO:\n\n1. AYUNEX (Jun 2025 - Present)\n   > Co-Founder & Technical Lead. Building hardware/AI prototypes for elderly care.\n\n2. ARCANUM AI (HackRX 6.0)\n   > High-perf Q&A system. Hybrid AI strategy, 2-level caching.\n\n3. CINESHIELD (Anti-Piracy)\n   > 2-Tier detection (Perceptual Hash + AI).\n\n4. BASTION (GNOME)\n   > Privacy extension. DNS leaks protection & Captive Portal handling.",
             
@@ -215,17 +215,42 @@
             { date: "2025-06-15", level: "DEV", msg: "Started building Hardware & AI prototypes for Ayunex." },
             { date: "2025-10-31", level: "MILESTONE", msg: "Shortlisted for AICTE APF & Yukthi Challenge." },
             { date: "2025-12-09", level: "RELEASE", msg: "Published 'Bastion' GNOME Extension." },
-            { date: "2025-12-13", level: "CURRENT", msg: "Stanford ML Certified | Technical Architect." }
+            { date: "2025-12-13", level: "CERT", msg: "Stanford ML Certified" },
+            { date: "2025-12-22", level: "CURRENT", msg: "Winter Intern @ IIT Ropar" }
         ];
 
         const commands = {
             'help': "Available commands: [about] [skills] [projects] [academics] [certs] [contact] [story] [log] [gui] [clear] [exit]",
-            'ls': "about.txt  skills.md  projects.dir  academics.info  certs.pem  contact.vcf  story.md  system.log  old_site.exe",
+            'ls': "about.txt  skills.md  projects.dir  academics.info  certs.pem  contact.vcf  story.md  system.log  old_site.exe  old_site.out",
             'gui': "Launching legacy graphical interface...",
             'startx': "Launching legacy graphical interface...",
             'whoami': "visitor@internet",
             'sudo': "User not in the sudoers file. This incident will be reported.",
-            'rm -rf /': "Nice try. I'm not deleting myself.",
+            'rm': "Nice try. I'm not deleting myself.",
+            'rm -rf /': "Deleting French Language pack...\nThe performance increased by 1000%",
+            'sl': "🚂💨💨💨 choo choo! (You meant 'ls', didn't you?)",
+            'fuck': "bash: fuck: command not found\nDid you mean: 'apt install thefuck'?",
+            'cd /': "Permission denied. You're stuck here forever! 😈",
+            'cd about.txt': fileSystem['about'],
+            'cd skills.md': fileSystem['skills'],
+            'cd projects.dir': fileSystem['projects'],
+            'cd academics.info': fileSystem['academics'],
+            'cd certs.pem': fileSystem['certs'],
+            'cd contact.vcf': fileSystem['contact'],
+            'cd story.md': fileSystem['story'],
+            'cd system.log': "Use 'log' command to view system logs.",
+            './old_site.exe': "bash: ./old_site.exe: cannot execute binary file\nTry: wine old_site.exe (if you have wine installed)",
+            'wine old_site.exe': "Wine is loading... Just kidding! Use './old_site.out' instead.",
+            './old_site.out': "Launching legacy graphical interface...",
+            'chmod 777 /': "Nice try, but I'm not making everything world-writable!",
+            'mount': "Nothing mounted here except my hopes and dreams.",
+            'unmount': "bash: unmount: command not found (try 'umount' next time)",
+            'killall': "I refuse to commit mass process genocide.",
+            'ps': "bash: ps: Too many processes! It's chaos in here!",
+            'htop': "Loading process viewer... Just kidding, this is just HTML!",
+            'vim': "Entering vim... Good luck getting out! (Just kidding, press ESC)",
+            'nano': "nano is for beginners. Real devs use butterflies.",
+            'emacs': "Emacs: A decent operating system, lacking only a good editor.",
             'exit': "Redirecting to main portfolio...",
             'reboot': "Redirecting to main portfolio...",
             'matrix': "Follow the white rabbit..."
@@ -278,7 +303,7 @@
                 return;
             }
             
-            if (cmd === 'gui' || cmd === 'startx' || cmd === './old_site.exe') {
+            if (cmd === 'gui' || cmd === 'startx' || cmd === './old_site.exe' || cmd === './old_site.out') {
                 printLine("Initializing graphics adapter...", "yellow");
                 setTimeout(() => {
                     guiContainer.innerHTML = OLD_WEBSITE_HTML;
