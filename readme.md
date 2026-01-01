@@ -82,7 +82,7 @@
   <a href="https://www.youtube.com/c/pgokul695" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
   </a>
-  <a href="https://www.reddit.com/user/Specialist_Froyo_362/" target="_blank">
+  <a href="https://www.reddit.com/user/Sea-Bumblebee1172/" target="_blank">
     <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit" />
   </a>
   <a href="https://extensions.gnome.org/accounts/profile/Gokul.codes" target="_blank">
