@@ -56,7 +56,7 @@
 | :--: | :--: |
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=pgokul695&theme=dark" />
+  <img src="[https://streak-stats.demolab.com?user=pgokul695&theme=dark](https://streak-stats.demolab.com/?user=pgokul695&theme=dark)" />
 </div>
 
 ---
