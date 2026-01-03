@@ -1,5 +1,5 @@
 <h1 align="center">Hi there 👋, I'm Gokul P</h1>
-<h3 align="center">Winter Intern @IIT Ropar| Co Founder @ Ayunex | AI Specialist | Open Source Enthusiast</h3>
+<h3 align="center">Winter Intern @IIT Ropar | Co Founder @ Ayunex | AI Specialist | Open Source Enthusiast</h3>
 
 <p align="center">
   <a href="https://pgokul695.github.io/">
@@ -13,7 +13,6 @@
   </a>
 </p>
 
-
 <p align="center">
   I am a <strong>Computer Science & Engineering</strong> student specializing in <strong>Artificial Intelligence</strong> (Class of 2027). I bridge the gap between software and hardware, with a passion that ranges from building neural networks to configuring homelabs and Linux servers.
 </p>
@@ -22,11 +21,11 @@
 
 ### 🚀 What I'm Up To
 
-- 🏢 **Co-Founder:** Building **Ayunex**, an early-stage startup.
-- 🐧 **Open Source:** Creating extensions for the **GNOME** ecosystem (Check out [Bastion](https://github.com/pgokul695)).
-- 🤖 **Internship:** Selected for the **NPTEL Winter Internship 2025** at **IIT Ropar**.
-- 🧠 **Learning:** Advanced Reinforcement Learning & Competitive Programming in **C++**.
-- ⚙️ **Hardware:** Managing a custom Homelab running Docker, Prometheus, and Grafana.
+- 🏢 <strong>Co-Founder:</strong> Building <strong>Ayunex</strong>, an early-stage startup.
+- 🐧 <strong>Open Source:</strong> Creating extensions for the <strong>GNOME</strong> ecosystem (Check out <a href="https://github.com/pgokul695">Bastion</a>).
+- 🤖 <strong>Internship:</strong> Selected for the <strong>NPTEL Winter Internship 2025</strong> at <strong>IIT Ropar</strong>.
+- 🧠 <strong>Learning:</strong> Advanced Reinforcement Learning & Competitive Programming in <strong>C++</strong>.
+- ⚙️ <strong>Hardware:</strong> Managing a custom Homelab running Docker, Prometheus, and Grafana.
 
 ---
 
@@ -38,10 +37,10 @@
 | **AI & Data** | ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat&logo=TensorFlow&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=flat&logo=opencv&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white) |
 | **Web & DB** | ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=flat&logo=flask&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) |
 | **Tools & OS** | ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white) |
+
 ---
 
 ### 📊 GitHub Stats
-
 
 <div align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
@@ -50,47 +49,46 @@
 </div>
 <br/>
 
-| <img src="https://github-readme-stats.vercel.app/api?username=pgokul695&show_icons=true&theme=dark&locale=en" alt="pgokul695" width="400" /> | <img src="https://github-readme-stats.vercel.app/api/top-langs?username=pgokul695&show_icons=true&theme=dark&locale=en&layout=compact" alt="pgokul695" width="400" /> |
+| <img src="https://github-readme-stats-88j5u3rab-gokulps-projects.vercel.app/api?username=pgokul695&show_icons=true&theme=dark&locale=en" width="400" /> | <img src="https://github-readme-stats-88j5u3rab-gokulps-projects.vercel.app/api/top-langs?username=pgokul695&show_icons=true&theme=dark&locale=en&layout=compact" width="400" /> |
 | :---: | :---: |
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=pgokul695&theme=dark" alt="pgokul695" />
+  <img src="https://github-readme-streak-stats-psi-smoky-97.vercel.app/?user=pgokul695&theme=dark" alt="pgokul695" />
 </div>
 
 ---
 
 <h3 align="left">Connect with me:</h3>
 <p align="center">
-  <a href="mailto:gokulp.codes@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Professional Email" />
+  <a href="mailto:gokulp.codes@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="mailto:pgokul695@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Personal_Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Personal Email" />
+  <a href="mailto:pgokul695@gmail.com">
+    <img src="https://img.shields.io/badge/Personal_Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://linkedin.com/in/pgokul695" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://linkedin.com/in/pgokul695">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="https://github.com/pgokul695" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <a href="https://github.com/pgokul695">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://x.com/p_pgokul" target="_blank">
-    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X / Twitter" />
+  <a href="https://x.com/p_pgokul">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" />
   </a>
-  <a href="https://instagram.com/pgokul695" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  <a href="https://instagram.com/pgokul695">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
   </a>
-  <a href="https://www.youtube.com/c/pgokul695" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+  <a href="https://www.youtube.com/c/pgokul695">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
   </a>
-  <a href="https://www.reddit.com/user/Sea-Bumblebee1172/" target="_blank">
-    <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit" />
+  <a href="https://www.reddit.com/user/Sea-Bumblebee1172/">
+    <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" />
   </a>
-  <a href="https://extensions.gnome.org/accounts/profile/Gokul.codes" target="_blank">
-    <img src="https://img.shields.io/badge/GNOME_Extensions-4a86cf?style=for-the-badge&logo=gnome&logoColor=white" alt="GNOME Extensions" />
+  <a href="https://extensions.gnome.org/accounts/profile/Gokul.codes">
+    <img src="https://img.shields.io/badge/GNOME_Extensions-4a86cf?style=for-the-badge&logo=gnome&logoColor=white" />
   </a>
 </p>
 
-<p align="center"> 
-  <img src="https://komarev.com/ghpvc/?username=pgokul695&label=Profile%20views&color=210eb4&style=flat-square" alt="pgokul695" /> 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=pgokul695&label=Profile%20views&color=210eb4&style=flat-square" />
 </p>
-
