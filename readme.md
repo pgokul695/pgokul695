@@ -4,7 +4,7 @@
 </h3>
 
 <p align="center">
-  <a href="https://pgokul695.github.io/">
+  <a href="https://gokulp.in/">
     <img src="https://img.shields.io/badge/Portfolio-Visit%20Site-blue?style=for-the-badge&logo=firefox" />
   </a>
   <a href="mailto:gokulp.codes@gmail.com">
@@ -26,7 +26,7 @@
 ### 🚀 What I'm Up To
 
 - 🏢 <strong>Co-Founder:</strong> Building <strong>Ayunex</strong>, an early-stage startup  
-- 🐧 <strong>Open Source:</strong> GNOME ecosystem extensions (see <a href="https://github.com/pgokul695">Bastion</a>)  
+- 🐧 <strong>Open Source:</strong> GNOME ecosystem extensions (see <a href="https://github.com/pgokul695/bastion">Bastion</a>)  
 - 🤖 <strong>Internship:</strong> NPTEL Winter Internship 2025 @ <strong>IIT Ropar</strong>  
 - 🧠 <strong>Learning:</strong> Advanced Reinforcement Learning & Competitive Programming (C++)  
 - ⚙️ <strong>Hardware:</strong> Homelab with Docker, Prometheus & Grafana  
