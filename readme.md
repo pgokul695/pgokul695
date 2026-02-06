@@ -1,6 +1,6 @@
 <h1 align="center">Hi there 👋, I'm Gokul P</h1>
 <h3 align="center">
-  Winter Intern @ IIT Ropar | Co-Founder @ Ayunex | AI Specialist | Open Source Enthusiast
+  Ex-Intern @ IIT Ropar | National Finalist @ EnCode 2026, IIT Guwahati | Co-Founder @ Ayunex | AI Specialist | Open Source Enthusiast
 </h3>
 
 <p align="center">
@@ -25,9 +25,10 @@
 
 ### 🚀 What I'm Up To
 
-- 🏢 <strong>Co-Founder:</strong> Building <strong>Ayunex</strong>, an early-stage startup  
 - 🐧 <strong>Open Source:</strong> GNOME ecosystem extensions (see <a href="https://github.com/pgokul695/bastion">Bastion</a>)  
-- 🤖 <strong>Internship:</strong> NPTEL Winter Internship 2025 @ <strong>IIT Ropar</strong>  
+- 🏆 <strong>National Finalist:</strong> Team Kairos @ <strong>EnCode 2026: Code To Innovate</strong>, the flagship AI hackathon by UDGAM, <strong>IIT Guwahati</strong>  
+- 🎓 <strong>Ex-Intern:</strong> NPTEL Winter Internship 2025 @ <strong>IIT Ropar</strong>  
+- 🏢 <strong>Co-Founder:</strong> Building <strong>Ayunex</strong>, an early-stage startup  
 - 🧠 <strong>Learning:</strong> Advanced Reinforcement Learning & Competitive Programming (C++)  
 - ⚙️ <strong>Hardware:</strong> Homelab with Docker, Prometheus & Grafana  
 
@@ -56,7 +57,7 @@
 | :--: | :--: |
 
 <div align="center">
-  <img src="[https://streak-stats.demolab.com?user=pgokul695&theme=dark](https://streak-stats.demolab.com/?user=pgokul695&theme=dark)" />
+  <img src="https://streak-stats.demolab.com/?user=pgokul695&theme=dark" />
 </div>
 
 ---
