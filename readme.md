@@ -1,6 +1,6 @@
 <h1 align="center">Hi there 👋, I'm Gokul P</h1>
 <h3 align="center">
-  Research Intern @ IIT Kharagpur  | Ex-Intern @ IIT Ropar | National Finalist @ EnCode 2026, IIT Guwahati | Maintainer of <a href="https://github.com/pgokul695/bastion">Bastion</a> | AI Specialist | Open Source Enthusiast
+  Research Intern @ IIT Kharagpur | National Finalist @ EnCode 2026, IIT Guwahati | Maintainer of <a href="https://github.com/pgokul695/bastion">Bastion</a> | Ex-Intern @ IIT Ropar | Open Source Enthusiast |
 </h3>
 
 <p align="center">
