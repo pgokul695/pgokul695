@@ -29,7 +29,7 @@
 - 🐧 <strong>Open Source:</strong> GNOME ecosystem extensions (see <a href="https://github.com/pgokul695/bastion">Bastion</a>)  
 - 🏆 <strong>National Finalist:</strong> Team Kairos @ <strong>EnCode 2026: Code To Innovate</strong>, the flagship AI hackathon by UDGAM, <strong>IIT Guwahati</strong>  
 - 🎓 <strong>Ex-Intern:</strong> NPTEL Winter Internship 2025 @ <strong>IIT Ropar</strong>  
-- 🧠 <strong>Learning:</strong> Advanced Reinforcement Learning & Competitive Programming (C++)  
+- 🧠 <strong>Learning:</strong> Advanced Reinforcement Learning & Competitive Programming (Python)  
 - ⚙️ <strong>Hardware:</strong> Homelab with Docker, Prometheus & Grafana  
 
 ---
