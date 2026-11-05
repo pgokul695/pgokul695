@@ -25,7 +25,8 @@
 
 ### 🚀 What I'm Up To
 
-- 🔬 <strong>Research Intern:</strong> NPTEL Summer Internship 2026  @ <strong>IIT Kharagpur</strong>   
+- 🔬 <strong>Ex- Research Intern:</strong> NPTEL Summer Internship 2026  @ <strong>IIT Kharagpur</strong>
+- 🖼️ <strong>Creator & Architect:</strong> <a href="https://chitra.gokulp.in">Chitra</a> — Privacy-first, offline-first client-side photo printing & framing PWA
 - 🐧 <strong>Open Source:</strong> GNOME ecosystem extensions (see <a href="https://github.com/pgokul695/bastion">Bastion</a>)  
 - 🏆 <strong>National Finalist:</strong> Team Kairos @ <strong>EnCode 2026: Code To Innovate</strong>, the flagship AI hackathon by UDGAM, <strong>IIT Guwahati</strong>  
 - 🎓 <strong>Ex-Intern:</strong> NPTEL Winter Internship 2025 @ <strong>IIT Ropar</strong>  
